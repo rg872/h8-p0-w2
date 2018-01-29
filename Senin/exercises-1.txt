@@ -1,0 +1,82 @@
+####################################
+##### Soal 1: Newton Second Law #####
+####################################
+
+DECLARE variable "force".
+DECLARE variable "mass".
+DECLARE variable "acceleration".
+
+READ and SAVE "mass".
+READ and SAVE "acceleration".
+
+COMPUTE "mass" multiply by "acceleration".
+SAVE previous computation result to "force".
+
+SHOW the computation result.
+
+
+#################################
+###### Soal 2: Tahun Kabisat #####
+#################################
+
+DECLARE variable "year"
+DECLARE variable "kabisat"
+
+READ and SAVE "year".
+
+COMPUTE "year" modulo by 4.
+IF COMPUTE "year" modulo by 4 not equal to 0.
+THEN "kabisat" is false.
+ELSE continue computation.
+
+COMPUTE "year" modulo by 100.
+IF COMPUTE "year" modulo by 100 not equal to 0.
+THEN "kabisat" is true.
+ELSE continue computation.
+
+COMPUTE "year" modulo by 400.
+IF COMPUTE "year" modulo by 400 not equal to 0.
+THEN "kabisat" is false.
+ELSE "kabisat" is true.
+
+SHOW the computation result.
+
+
+##############################
+##### Soal 3: Laundry Day #####
+##############################
+
+DECLARE variable "clothes";
+DECLARE and INITIALIZE variable "clothesInWasher" as 0.
+DECLARE variable "readyToWash".
+
+READ and SAVE "clothes".
+
+WHILE "clothes" is not 0.
+DO subtract "clothes" by 1 AND add "clothesInWasher" by 1,
+   SHOW "clothes" and "clothesInWasher".
+IF "clothes" is 0.
+THEN "readyToWash" is true.
+ELSE continue loop.
+
+IF "readyToWash" is true.
+SHOW message "You can push the wash button".
+
+
+###############################
+##### Soal 4: Periksa Kuku #####
+###############################
+
+DECLARE variable "jmlSiswa".
+DECLARE variable "noSiswa".
+DECLARE variable boolean "kukuPanjang".
+
+READ and SAVE "siswa".
+
+WHILE "jmlSiswa" is not 0.
+DO subtract "jmlSiswa" by 1 AND SAVE to "noSiswa" AND RANDOMIZE "kukuPanjang".
+  IF "kukuPanjang" is true.
+  THEN SHOW message "Siswa ke [noSiswa] memiliki kuku panjang".
+
+IF "jmlSiswa" is 0.
+THEN SHOW message "Siswa yang memiliki kuku panjang harap melapor ke guru BP".
