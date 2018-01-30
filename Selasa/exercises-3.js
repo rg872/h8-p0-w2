@@ -3,7 +3,7 @@ var peran = '';
 
 window.prompt('Selamat datang pengembara ke dunia Proxytia !');
 
-if (nama == '') {
+while (nama == '') {
   var nama = window.prompt('Boleh kita tahu nama kamu ?', 'Masukan nama kamu');
 }
 
